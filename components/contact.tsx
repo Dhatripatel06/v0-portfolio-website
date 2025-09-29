@@ -132,7 +132,7 @@ export function Contact() {
             </Card>
           </div>
 
-          {/* Contact Form */}
+          /* {/* Contact Form */}
           <Card>
             <CardHeader>
               <CardTitle>Send a Message</CardTitle>
@@ -172,4 +172,4 @@ export function Contact() {
       </div>
     </section>
   )
-}
+} */
