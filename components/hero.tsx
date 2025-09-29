@@ -11,9 +11,9 @@ export function Hero() {
         <div className="space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-6xl font-bold text-balance">
-              <span className="text-foreground">Dhatri Bhadreshbhai</span>
+              <span className="text-foreground">Dhatri Patel</span>
               <br />
-              <span className="text-primary">Paladiya</span>
+              <span className="text-primary"></span>
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground text-balance">
               Computer Engineering Student | AI/ML Enthusiast | Research Publications
