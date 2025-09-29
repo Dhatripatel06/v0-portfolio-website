@@ -74,7 +74,6 @@ export function Contact() {
             Let's connect and discuss opportunities, collaborations, or just have a chat about technology
           </p>
         </div>
-
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
@@ -105,7 +104,6 @@ export function Contact() {
                 })}
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader>
                 <CardTitle>Connect With Me</CardTitle>
@@ -131,5 +129,45 @@ export function Contact() {
               </CardContent>
             </Card>
           </div>
+          {/* Contact Form */}
+          <form onSubmit={handleSubmit} className="space-y-8">
+            <Card>
+              <CardHeader>
+                <CardTitle>Send a Message</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <Input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <Textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={5}
+                />
+                <Button type="submit" className="w-full">Send Message</Button>
+              </CardContent>
+            </Card>
+          </form>
+        </div>
+      </div>
+    </section>
+  )
+}
 
-         
+
