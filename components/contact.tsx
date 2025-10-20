@@ -41,8 +41,8 @@ export function Contact() {
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 9163555064",
-      href: "tel:+919163555064",
+      value: "+91 6355506411",
+      href: "tel:+916355506411",
     },
     {
       icon: MapPin,
