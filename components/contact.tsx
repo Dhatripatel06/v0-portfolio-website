@@ -1,35 +1,9 @@
 "use client"
 
-import React from "react"
-
-import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react"
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
-    // Reset form
-    setFormData({ name: "", email: "", message: "" })
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
 
   const contactInfo = [
     {
@@ -41,8 +15,8 @@ export function Contact() {
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 9163555064",
-      href: "tel:+919163555064",
+      value: "+91 6355506411",
+      href: "tel:+916355506411",
     },
     {
       icon: MapPin,
@@ -74,9 +48,10 @@ export function Contact() {
             Let's connect and discuss opportunities, collaborations, or just have a chat about technology
           </p>
         </div>
-        <div className="grid lg:grid-cols-2 gap-12">
+
+        <div className="flex justify-center">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-8 max-w-2xl">
             <Card>
               <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
@@ -104,6 +79,7 @@ export function Contact() {
                 })}
               </CardContent>
             </Card>
+
             <Card>
               <CardHeader>
                 <CardTitle>Connect With Me</CardTitle>
@@ -129,45 +105,8 @@ export function Contact() {
               </CardContent>
             </Card>
           </div>
-          {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="space-y-8">
-            <Card>
-              <CardHeader>
-                <CardTitle>Send a Message</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <Input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-                <Input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-                <Textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                />
-                <Button type="submit" className="w-full">Send Message</Button>
-              </CardContent>
-            </Card>
-          </form>
         </div>
       </div>
     </section>
   )
 }
-
-
